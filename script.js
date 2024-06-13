@@ -1,0 +1,73 @@
+function findAndReturnNextSeven(substring, mainString, limit) {
+    // Encontra o índice da primeira ocorrência da substring
+    const startIndex = mainString.indexOf(substring);
+    
+    // Se a substring não for encontrada, retorna uma string vazia
+    if (startIndex === -1) {
+        return '';
+    }
+    
+    // Calcula o índice inicial dos caracteres seguintes à substring
+    const nextCharsStartIndex = startIndex + substring.length;
+    
+    // Pega os 7 caracteres seguintes, garantindo que não ultrapasse o tamanho da string principal
+    const nextSevenChars = mainString.slice(nextCharsStartIndex, nextCharsStartIndex + limit);
+    
+    //console.log(nextSevenChars);
+    return nextSevenChars;
+}
+
+// Exemplo de uso
+const substring = 'buscar';
+const mainString = 'Aqui está uma frase onde vamos buscar a substring e pegar os caracteres seguintes.';
+const result = findAndReturnNextSeven(substring, mainString);
+//console.log(result); // Saída esperada: " a sub"
+
+
+document.getElementById('pdfFile').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file.type !== 'application/pdf') {
+        console.error('Por favor, selecione um arquivo PDF.');
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function() {
+        const typedArray = new Uint8Array(reader.result);
+        pdfjsLib.getDocument({ data: typedArray }).promise.then(async function(pdf) {
+            let textContent = '';
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                const page = await pdf.getPage(pageNum);
+                const textContentPage = await page.getTextContent();
+                const textItems = textContentPage.items;
+                for (let i = 0; i < textItems.length; i++) {
+                    textContent += textItems[i].str + ' ';
+                }
+            }
+
+            console.log('Conteúdo do PDF:', textContent);
+            const teste = findAndReturnNextSeven('CTPS', textContent, 8);
+            console.log(teste);
+
+            // Extração de endereço e telefone (exemplo simples)
+            const addressRegex = /\d{5}-\d{3} \w+ \w+/;  // Exemplo de regex para endereço
+            const phoneRegex = /\(\d{2}\) \d{4,5}-\d{4}/;  // Exemplo de regex para telefone
+
+            const addressMatch = textContent.match(addressRegex);
+            const phoneMatch = textContent.match(phoneRegex);
+
+            if (addressMatch) {
+                console.log('Endereço:', addressMatch[0]);
+            } else {
+                console.log('Endereço não encontrado.');
+            }
+
+            if (phoneMatch) {
+                console.log('Telefone:', phoneMatch[0]);
+            } else {
+                console.log('Telefone não encontrado.');
+            }
+        });
+    };
+    reader.readAsArrayBuffer(file);
+});
