@@ -46,27 +46,12 @@ document.getElementById('pdfFile').addEventListener('change', function(event) {
             }
 
             console.log('Conteúdo do PDF:', textContent);
-            const teste = findAndReturnNextSeven('CTPS', textContent, 8);
-            console.log(teste);
 
-            // Extração de endereço e telefone (exemplo simples)
-            const addressRegex = /\d{5}-\d{3} \w+ \w+/;  // Exemplo de regex para endereço
-            const phoneRegex = /\(\d{2}\) \d{4,5}-\d{4}/;  // Exemplo de regex para telefone
+            const ctps = findAndReturnNextSeven('CTPS', textContent, 8);
+            console.log(ctps);
 
-            const addressMatch = textContent.match(addressRegex);
-            const phoneMatch = textContent.match(phoneRegex);
-
-            if (addressMatch) {
-                console.log('Endereço:', addressMatch[0]);
-            } else {
-                console.log('Endereço não encontrado.');
-            }
-
-            if (phoneMatch) {
-                console.log('Telefone:', phoneMatch[0]);
-            } else {
-                console.log('Telefone não encontrado.');
-            }
+            const pis = findAndReturnNextSeven('PIS', textContent, 14);
+            console.log(ctps);
         });
     };
     reader.readAsArrayBuffer(file);
