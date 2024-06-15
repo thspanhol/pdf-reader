@@ -50,8 +50,11 @@ document.getElementById('pdfFile').addEventListener('change', function(event) {
             const ctps = findAndReturnNextSeven('CTPS', textContent, 8);
             console.log(ctps);
 
-            const pis = findAndReturnNextSeven('PIS', textContent, 14);
-            console.log(ctps);
+            const pis = findAndReturnNextSeven('PIS', textContent, 15);
+            console.log(pis);
+
+            const nome = findAndReturnNextSeven('Practice', textContent, 40);
+            console.log(nome);
         });
     };
     reader.readAsArrayBuffer(file);
