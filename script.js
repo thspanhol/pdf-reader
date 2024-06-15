@@ -55,6 +55,9 @@ document.getElementById('pdfFile').addEventListener('change', function(event) {
 
             const nome = findAndReturnNextSeven('Practice', textContent, 40);
             console.log(nome);
+
+            const email = findAndReturnNextSeven('Endereço eletrônico', textContent, 20);
+            console.log(email);
         });
     };
     reader.readAsArrayBuffer(file);
