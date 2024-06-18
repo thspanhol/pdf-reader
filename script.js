@@ -58,6 +58,9 @@ document.getElementById('pdfFile').addEventListener('change', function(event) {
 
             const email = findAndReturnNextSeven('Endereço eletrônico', textContent, 20);
             console.log(email);
+
+            const celular = findAndReturnNextSeven('Telefone Celular ', textContent, 15);
+            console.log(celular);
         });
     };
     reader.readAsArrayBuffer(file);
