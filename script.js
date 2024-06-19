@@ -61,6 +61,9 @@ document.getElementById('pdfFile').addEventListener('change', function(event) {
 
             const celular = findAndReturnNextSeven('Telefone Celular ', textContent, 15);
             console.log(celular);
+
+            const naturalidade = findAndReturnNextSeven('Naturalidade ', textContent, 12);
+            console.log(naturalidade);
         });
     };
     reader.readAsArrayBuffer(file);
