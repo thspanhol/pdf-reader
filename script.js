@@ -81,6 +81,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           12
         );
         console.log(naturalidade);
+
+        const nascimento = findAndReturnNextSeven(
+          "Data de nascimento ",
+          textContent,
+          10
+        );
+        console.log(nascimento);
       });
   };
   reader.readAsArrayBuffer(file);
