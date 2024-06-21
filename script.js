@@ -88,6 +88,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           10
         );
         console.log(nascimento);
+
+        const identidade = findAndReturnNextSeven(
+          "Cédula de identidade ",
+          textContent,
+          10
+        );
+        console.log(identidade);
       });
   };
   reader.readAsArrayBuffer(file);
