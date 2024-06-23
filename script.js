@@ -102,6 +102,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           10
         );
         console.log(admissao);
+
+        const cargo = findAndReturnNextSeven(
+          "Função ",
+          textContent,
+          26
+        );
+        console.log(cargo);
       });
   };
   reader.readAsArrayBuffer(file);
