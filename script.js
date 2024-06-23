@@ -95,6 +95,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           10
         );
         console.log(identidade);
+
+        const admissao = findAndReturnNextSeven(
+          "Data de admissão ",
+          textContent,
+          10
+        );
+        console.log(admissao);
       });
   };
   reader.readAsArrayBuffer(file);
