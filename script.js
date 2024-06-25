@@ -109,6 +109,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           26
         );
         console.log(cargo);
+
+        const cpf = findAndReturnNextSeven(
+          "CPF ",
+          textContent,
+          14
+        );
+        console.log(cpf);
       });
   };
   reader.readAsArrayBuffer(file);
