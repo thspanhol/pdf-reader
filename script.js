@@ -116,6 +116,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           14
         );
         console.log(cpf);
+
+        const salario = findAndReturnNextSeven(
+          "Salário Inicial ",
+          textContent,
+          11
+        );
+        console.log(salario);
       });
   };
   reader.readAsArrayBuffer(file);
