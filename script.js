@@ -123,6 +123,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           11
         );
         console.log(salario);
+
+        const registro = findAndReturnNextSeven(
+          "Registro profissional ",
+          textContent,
+          12
+        );
+        console.log(registro);
       });
   };
   reader.readAsArrayBuffer(file);
