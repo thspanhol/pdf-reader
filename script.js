@@ -103,18 +103,10 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
         );
         console.log(admissao);
 
-        const cargo = findAndReturnNextSeven(
-          "Função ",
-          textContent,
-          26
-        );
+        const cargo = findAndReturnNextSeven("Função ", textContent, 26);
         console.log(cargo);
 
-        const cpf = findAndReturnNextSeven(
-          "CPF ",
-          textContent,
-          14
-        );
+        const cpf = findAndReturnNextSeven("CPF ", textContent, 14);
         console.log(cpf);
 
         const salario = findAndReturnNextSeven(
