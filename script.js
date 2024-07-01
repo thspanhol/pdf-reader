@@ -122,6 +122,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           12
         );
         console.log(registro);
+
+        const eleitor = findAndReturnNextSeven(
+          "título de eleitor ",
+          textContent,
+          26
+        );
+        console.log(eleitor);
       });
   };
   reader.readAsArrayBuffer(file);
