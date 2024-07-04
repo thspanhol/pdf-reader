@@ -129,6 +129,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           26
         );
         console.log(eleitor);
+
+        const estadoCivil = findAndReturnNextSeven(
+          "Estado Civil ",
+          textContent,
+          8
+        );
+        console.log(estadoCivil);
       });
   };
   reader.readAsArrayBuffer(file);
