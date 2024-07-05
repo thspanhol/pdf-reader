@@ -136,6 +136,13 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           8
         );
         console.log(estadoCivil);
+
+        const educacao = findAndReturnNextSeven(
+          "- Educação ",
+          textContent,
+          19
+        );
+        console.log(educacao);
       });
   };
   reader.readAsArrayBuffer(file);
