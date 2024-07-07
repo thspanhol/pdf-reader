@@ -43,19 +43,52 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
         updateHTML("ctps", findAndReturnNextSeven("CTPS", textContent, 20));
         updateHTML("pis", findAndReturnNextSeven("PIS", textContent, 15));
         updateHTML("nome", findAndReturnNextSeven("Practice", textContent, 29));
-        updateHTML("email", findAndReturnNextSeven("Endereço eletrônico", textContent, 32));
-        updateHTML("celular", findAndReturnNextSeven("Telefone Celular ", textContent, 15));
-        updateHTML("naturalidade", findAndReturnNextSeven("Naturalidade ", textContent, 12));
-        updateHTML("nascimento", findAndReturnNextSeven("Data de nascimento ", textContent, 10));
-        updateHTML("identidade", findAndReturnNextSeven("Cédula de identidade ", textContent, 10));
-        updateHTML("admissao", findAndReturnNextSeven("Data de admissão ", textContent, 10));
+        updateHTML(
+          "email",
+          findAndReturnNextSeven("Endereço eletrônico", textContent, 32)
+        );
+        updateHTML(
+          "celular",
+          findAndReturnNextSeven("Telefone Celular ", textContent, 15)
+        );
+        updateHTML(
+          "naturalidade",
+          findAndReturnNextSeven("Naturalidade ", textContent, 12)
+        );
+        updateHTML(
+          "nascimento",
+          findAndReturnNextSeven("Data de nascimento ", textContent, 10)
+        );
+        updateHTML(
+          "identidade",
+          findAndReturnNextSeven("Cédula de identidade ", textContent, 10)
+        );
+        updateHTML(
+          "admissao",
+          findAndReturnNextSeven("Data de admissão ", textContent, 10)
+        );
         updateHTML("cargo", findAndReturnNextSeven("Função ", textContent, 26));
         updateHTML("cpf", findAndReturnNextSeven("CPF ", textContent, 14));
-        updateHTML("salario", findAndReturnNextSeven("Salário Inicial ", textContent, 11));
-        updateHTML("registro", findAndReturnNextSeven("Registro profissional ", textContent, 12));
-        updateHTML("eleitor", findAndReturnNextSeven("título de eleitor ", textContent, 26));
-        updateHTML("estadoCivil", findAndReturnNextSeven("Estado Civil ", textContent, 8));
-        updateHTML("educacao", findAndReturnNextSeven("- Educação ", textContent, 19));
+        updateHTML(
+          "salario",
+          findAndReturnNextSeven("Salário Inicial ", textContent, 11)
+        );
+        updateHTML(
+          "registro",
+          findAndReturnNextSeven("Registro profissional ", textContent, 12)
+        );
+        updateHTML(
+          "eleitor",
+          findAndReturnNextSeven("título de eleitor ", textContent, 26)
+        );
+        updateHTML(
+          "estadoCivil",
+          findAndReturnNextSeven("Estado Civil ", textContent, 8)
+        );
+        updateHTML(
+          "educacao",
+          findAndReturnNextSeven("- Educação ", textContent, 19)
+        );
       });
   };
   reader.readAsArrayBuffer(file);
