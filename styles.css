@@ -3,6 +3,7 @@
     border: 0;
 }
 body{
+    display: flex;
     background-color: black;
     color: white;
     font-size: 20px;
