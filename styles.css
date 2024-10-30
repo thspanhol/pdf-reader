@@ -9,4 +9,5 @@ body{
     color: white;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    gap: 5px;
 }
