@@ -4,6 +4,7 @@
 }
 body{
     display: flex;
+    flex-direction: column;
     background-color: black;
     color: white;
     font-size: 20px;
