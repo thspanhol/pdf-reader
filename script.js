@@ -85,10 +85,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           "estadoCivil",
           findAndReturnNextSeven("Estado Civil ", textContent, 8)
         );
-        updateHTML(
-          "educacao",
-          findAndReturnNextSeven("- Educação ", textContent, 19)
-        );
       });
   };
   reader.readAsArrayBuffer(file);
