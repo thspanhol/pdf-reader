@@ -78,10 +78,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           findAndReturnNextSeven("Registro profissional ", textContent, 12)
         );
         updateHTML(
-          "eleitor",
-          findAndReturnNextSeven("título de eleitor ", textContent, 26)
-        );
-        updateHTML(
           "estadoCivil",
           findAndReturnNextSeven("Estado Civil ", textContent, 8)
         );
