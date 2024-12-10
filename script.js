@@ -74,10 +74,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           findAndReturnNextSeven("Salário Inicial ", textContent, 11)
         );
         updateHTML(
-          "registro",
-          findAndReturnNextSeven("Registro profissional ", textContent, 12)
-        );
-        updateHTML(
           "estadoCivil",
           findAndReturnNextSeven("Estado Civil ", textContent, 8)
         );
