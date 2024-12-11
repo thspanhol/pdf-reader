@@ -70,10 +70,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
         updateHTML("cargo", findAndReturnNextSeven("Função ", textContent, 26));
         updateHTML("cpf", findAndReturnNextSeven("CPF ", textContent, 14));
         updateHTML(
-          "salario",
-          findAndReturnNextSeven("Salário Inicial ", textContent, 11)
-        );
-        updateHTML(
           "estadoCivil",
           findAndReturnNextSeven("Estado Civil ", textContent, 8)
         );
