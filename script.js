@@ -63,10 +63,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           "identidade",
           findAndReturnNextSeven("Cédula de identidade ", textContent, 10)
         );
-        updateHTML(
-          "admissao",
-          findAndReturnNextSeven("Data de admissão ", textContent, 10)
-        );
         updateHTML("cargo", findAndReturnNextSeven("Função ", textContent, 26));
         updateHTML("cpf", findAndReturnNextSeven("CPF ", textContent, 14));
         updateHTML(
