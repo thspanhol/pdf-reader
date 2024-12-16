@@ -63,7 +63,7 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           "identidade",
           findAndReturnNextSeven("Cédula de identidade ", textContent, 10)
         );
-        updateHTML("cargo", findAndReturnNextSeven("Função ", textContent, 26));
+    
       });
   };
   reader.readAsArrayBuffer(file);
