@@ -56,10 +56,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
           findAndReturnNextSeven("Naturalidade ", textContent, 12)
         );
         updateHTML(
-          "nascimento",
-          findAndReturnNextSeven("Data de nascimento ", textContent, 10)
-        );
-        updateHTML(
           "identidade",
           findAndReturnNextSeven("Cédula de identidade ", textContent, 10)
         );
