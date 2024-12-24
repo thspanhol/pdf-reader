@@ -43,10 +43,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
         updateHTML("ctps", findAndReturnNextSeven("CTPS", textContent, 20));
         updateHTML("nome", findAndReturnNextSeven("Practice", textContent, 29));
         updateHTML(
-          "email",
-          findAndReturnNextSeven("Endereço eletrônico", textContent, 32)
-        );
-        updateHTML(
           "celular",
           findAndReturnNextSeven("Telefone Celular ", textContent, 15)
         );
