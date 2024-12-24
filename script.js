@@ -41,7 +41,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
         console.log(textContent);
 
         updateHTML("ctps", findAndReturnNextSeven("CTPS", textContent, 20));
-        updateHTML("pis", findAndReturnNextSeven("PIS", textContent, 15));
         updateHTML("nome", findAndReturnNextSeven("Practice", textContent, 29));
         updateHTML(
           "email",
