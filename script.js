@@ -43,10 +43,6 @@ document.getElementById("pdfFile").addEventListener("change", function (event) {
         updateHTML("ctps", findAndReturnNextSeven("CTPS", textContent, 20));
         updateHTML("nome", findAndReturnNextSeven("Practice", textContent, 29));
         updateHTML(
-          "naturalidade",
-          findAndReturnNextSeven("Naturalidade ", textContent, 12)
-        );
-        updateHTML(
           "identidade",
           findAndReturnNextSeven("Cédula de identidade ", textContent, 10)
         );
